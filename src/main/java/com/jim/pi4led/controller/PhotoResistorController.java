@@ -8,7 +8,7 @@ import com.pi4j.io.gpio.GpioFactory;
 import com.pi4j.io.gpio.GpioPinAnalogInput;
 import com.pi4j.io.gpio.RaspiPin;
 
-@RestController
+@RestController("/")
 public class PhotoResistorController {
 
 	public static GpioPinAnalogInput pin;

@@ -25,8 +25,18 @@ public class LedController {
 			GpioController gpio = GpioFactory.getInstance();
 			pin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_01, "MyLED", PinState.LOW);
 		}
-		pin.toggle();
-		return "Okay Light";
+		//pin.toggle();
+		
+		while (true){
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return "Okay Light";
+		}
+		
 	}
 
 }
